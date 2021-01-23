@@ -1,12 +1,13 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
-import backGround from "../assets/images/new1.jpg";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
+import backGround from '../assets/images/new1.jpg';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 600,
-    margin: "auto",
+    margin: 'auto',
     marginTop: theme.spacing(5),
   },
   title: {
@@ -23,16 +24,16 @@ const Home = () => {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
-      <Typography variant="h6" className={classes.title}>
-        Home Page
+      <Typography variant='h6' className={classes.title}>
+        <Link to='/users'>Users</Link> Home Page
       </Typography>
       <CardMedia
         className={classes.media}
         image={backGround}
-        title="Unicorn Bicycle"
+        title='Unicorn Bicycle'
       />
       <CardContent>
-        <Typography variant="body2" component="p">
+        <Typography variant='body2' component='p'>
           Welcome to the MERN Skeleton home page.
         </Typography>
       </CardContent>
